@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Game card TEMPLATE for mlb-matchup-projections
+#
+# Easiest start: let the project fill a card in for you, then edit it:
+#     mlb-matchup card LAD NYY --date 2026-10-02 --time night
+# (PyCharm: run "Make example game card")
+#
+# Or copy this file, rename it (e.g. my_game.yaml), and replace every name.
+# Names must match players who appeared in 2026. If two players share a name,
+# write "Name (TEAM)" or use their MLBAM ID as "ID 123456".
+# Find names and IDs with:  mlb-matchup players smith
+# ---------------------------------------------------------------------------
+
+game:
+  date: 2026-10-02      # projections use 2026 games played before this date
+  park: NYY             # home team's park (team code)
+  time: night           # day, night or unknown
+  sims: 10000           # simulated games (more = smoother numbers, slower)
+
+away:
+  team: LAD
+  lineup:               # batting order, 1-9 (exactly 9 names)
+    - "Leadoff Hitter"
+    - "Second Hitter"
+    - "Third Hitter"
+    - "Cleanup Hitter"
+    - "Fifth Hitter"
+    - "Sixth Hitter"
+    - "Seventh Hitter"
+    - "Eighth Hitter"
+    - "Ninth Hitter"
+  bench:                # optional: projected vs every pitcher, not simulated
+    - "Bench Bat One"
+    - "Bench Bat Two"
+  pitchers:
+    starter: "Starting Pitcher"
+    starter_innings: 5.5          # optional; delete to use his 2026 average
+    opener: null                  # optional: pitches first, then the starter enters
+    opener_innings: 1.0
+    relievers:                    # up to 3 available relievers
+      - "Reliever One"
+      - "Reliever Two"
+      - "Reliever Three"
+    reliever_weights: [0.4, 0.35, 0.25]   # optional: relative chance each is used
+    closer: "Closer Name"         # optional; pitches the 9th in save situations
+
+home:
+  team: NYY
+  lineup:
+    - "Leadoff Hitter"
+    - "Second Hitter"
+    - "Third Hitter"
+    - "Cleanup Hitter"
+    - "Fifth Hitter"
+    - "Sixth Hitter"
+    - "Seventh Hitter"
+    - "Eighth Hitter"
+    - "Ninth Hitter"
+  bench: []
+  pitchers:
+    starter: "Starting Pitcher"
+    opener: null
+    relievers:
+      - "Reliever One"
+      - "Reliever Two"
+    closer: "Closer Name"

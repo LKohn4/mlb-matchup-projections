@@ -1,0 +1,66 @@
+# Game card for mlb-matchup-projections
+# Names must match 2026 players. If a name is shared, write it as "Name (TEAM)" or
+# use "ID 123456". Search with:  mlb-matchup players <name>
+# Auto-generated example: edit any name and re-run 'project'.
+
+game:
+  date: 2026-09-30      # projections use 2026 games played before this date
+  park: MIL            # home team's park
+  time: night          # day, night or unknown
+  sims: 10000         # simulated games
+
+away:
+  team: LAD
+  lineup:          # batting order, 1-9
+    - "Shohei Ohtani"
+    - "Mookie Betts"
+    - "Freddie Freeman"
+    - "Kyle Tucker"
+    - "Teoscar Hernández"
+    - "Max Muncy (LAD)"
+    - "Andy Pages"
+    - "Hunter Feduccia"
+    - "Tommy Edman"
+  bench:           # optional; projected against every pitcher, not simulated
+    - "Will Smith"
+    - "Enrique Hernández"
+    - "Alex Freeland"
+    - "Miguel Rojas"
+  pitchers:
+    starter: "Yoshinobu Yamamoto"
+    starter_innings: 6.5   # delete to use his 2026 average
+    opener: null   # optional: pitches first, then the starter
+    opener_innings: 1.0
+    relievers:     # up to 3 available relievers
+      - "Alex Vesia"
+      - "Evan Phillips"
+      - "Seth Halvorsen"
+    closer: "Tanner Scott"
+
+home:
+  team: MIL
+  lineup:          # batting order, 1-9
+    - "Garrett Mitchell"
+    - "Jake Bauers"
+    - "Jackson Chourio"
+    - "Brice Turang"
+    - "Gary Sánchez"
+    - "Christian Yelich"
+    - "Cooper Pratt"
+    - "Sal Frelick"
+    - "David Hamilton"
+  bench:           # optional; projected against every pitcher, not simulated
+    - "William Contreras"
+    - "Luis Lara"
+    - "Joey Ortiz"
+    - "Andrew Vaughn"
+  pitchers:
+    starter: "Logan Henderson"
+    starter_innings: 5.4   # delete to use his 2026 average
+    opener: null   # optional: pitches first, then the starter
+    opener_innings: 1.0
+    relievers:     # up to 3 available relievers
+      - "Antonio Senzatela"
+      - "DL Hall"
+      - "Aaron Ashby"
+    closer: "Trevor Megill"
